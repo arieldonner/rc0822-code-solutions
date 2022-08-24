@@ -1,0 +1,61 @@
+.center-text {
+  text-align: center;
+}
+
+.center {
+  margin: auto;
+  width: 500px;
+}
+
+.orange {
+  background-color: rgb(247 56 31 / 76%);
+  color: white;
+  border: none;
+  padding: 7px 25px;
+  border-radius: 20px;
+  margin-left: 355px;
+  margin-top: -5px;
+  font-family: "Brandon Grotesque", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url("BrandonGrotesque-Regular.woff2") format("woff2");
+  text-transform: uppercase;
+}
+
+h2 {
+  color: orangered;
+  font-family: "Brandon Grotesque", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.text-box {
+  width: 450px;
+  padding: 10px 8px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-family: AtlasGrotesk, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  src: url("AtlasGrotesk-Light-Web.woff2") format("woff2");
+}
+
+label {
+  display: block;
+  font-family: "Brandon Grotesque", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url("BrandonGrotesque-Regular.woff2") format("woff2");
+  text-transform: uppercase;
+  margin-left: 8px;
+  margin-bottom: 1px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.no-padding {
+  padding-left: 0;
+}
