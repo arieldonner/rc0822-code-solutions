@@ -19,12 +19,13 @@
   display: flex;
 }
 
-.column-one-fifth {
-  width: calc(100% / 5);
+.column-two-sevenths {
+  width: calc(2 / 7 * 100%);
 }
 
-.column-four-fifths {
-  width: calc(4 / 5 * 100%);
+.column-five-sevenths {
+  width: calc(5 / 7 * 100%);
+  margin-top: 20px;
 }
 
 img {
