@@ -1,0 +1,97 @@
+.container {
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.column-half {
+  width: 50%;
+  display: flex;
+}
+
+.column-one-fifth {
+  width: calc(100% / 5);
+}
+
+.column-four-fifths {
+  width: calc(4 / 5 * 100%);
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  font-family: Karla, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1,
+h3 {
+  font-family: Karla, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 52px;
+}
+
+h3 {
+  margin-bottom: -8px;
+}
+
+.block {
+  display: block;
+}
+
+button {
+  font-family: Karla, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  border: 1px solid rgb(255 60 0);
+  color: rgb(255 60 0);
+  padding: 7px 30px;
+  margin-top: 30px;
+}
+
+.text-align {
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.letter-space {
+  letter-spacing: 4px;
+}
+
+.line-height {
+  line-height: 29px;
+}
+
+.margin-bottom {
+  margin-bottom: 50px;
+}
+
+.heading {
+  max-width: 710px;
+  margin: -15px auto 40px;
+}
+
+.column-four-fifths > p {
+  max-width: 300px;
+}
