@@ -33,6 +33,15 @@
   color: gray;
 }
 
+.text-dark-grey {
+  color: rgb(80 80 80);
+}
+
+.text-dark-blue {
+  color: rgb(2 29 104);
+  text-decoration: none;
+}
+
 .avenir {
   font-family: Avenir, sans-serif;
   font-style: normal;
@@ -43,6 +52,12 @@
   font-family: "Tiempos Headline", sans-serif;
   font-style: normal;
   font-weight: normal;
+}
+
+.tiempos-italic {
+  font-family: "Tiempos Headline", sans-serif;
+  font-style: italic;
+  font-weight: 300;
 }
 
 /* Home */
@@ -195,13 +210,14 @@
   right: 25px;
 }
 
+/* Footer(on every page) */
 .home-started {
   background-color: rgb(0 46 73);
   padding: 18px 50px;
   border: none;
   border-radius: 4px;
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .home-p-small {
@@ -230,12 +246,12 @@
   height: 2px;
   border-top: none;
   margin-top: 70px;
-  margin-bottom: -10px;
+  margin-bottom: 10px;
 }
 
 .background-grey {
   background-color: rgb(71 71 71);
-  padding: 60px 75px 80px;
+  padding: 80px 75px 150px;
   margin-top: 60px;
 }
 
@@ -277,7 +293,6 @@
 
 .footer {
   text-decoration: none;
-  color: grey;
   font-size: 18px;
 }
 
@@ -291,7 +306,7 @@
 
 /* Product Page */
 .product-img-background {
-  width: 1340px;
+  width: 1350px;
   height: 625px;
   background-image: url("images/product/product-header.jpg");
   background-size: cover;
@@ -299,11 +314,71 @@
   position: relative;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 200px;
 }
 
 .product-text-on-img {
   position: absolute;
-  left: 120px;
+  left: 130px;
   top: 150px;
-  width: 550px;
+  width: 590px;
+}
+
+.product-text-headings {
+  font-size: 35px;
+}
+
+.product-p {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.product-care-1 {
+  max-width: 490px;
+}
+
+.product-care-2 {
+  font-style: italic;
+  max-width: 500px;
+}
+
+.product-care-margin {
+  margin-top: 30px;
+  margin-left: 230px;
+}
+
+.product-margin-bottom {
+  margin-bottom: 120px;
+}
+
+.product-population-1 {
+  max-width: 480px;
+}
+
+.product-population-2 {
+  max-width: 500px;
+}
+
+.product-population-margin {
+  margin-top: 30px;
+}
+
+.product-automate-heading {
+  max-width: 500px;
+}
+
+.product-automate-1 {
+  max-width: 475px;
+}
+
+.product-automate-2 {
+  max-width: 500px;
+}
+
+.product-automate-img {
+  margin-top: 80px;
+}
+
+.product-automate-margin {
+  margin-left: 230px;
 }
