@@ -449,7 +449,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  margin: 60px auto 100px;
+  margin: 60px auto;
 }
 
 .about-text-on-img {
@@ -457,4 +457,23 @@
   left: 135px;
   top: 150px;
   width: 610px;
+}
+
+.about-p-believe {
+  width: 665px;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.about-p-blue {
+  font-weight: bold;
+}
+
+.about-heading-believe {
+  font-size: 35px;
+}
+
+.about-team-img {
+  border-radius: 50%;
+  width: 300px;
 }
