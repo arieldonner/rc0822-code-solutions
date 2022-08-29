@@ -440,3 +440,21 @@
 .implem-bottom-margin {
   margin-bottom: 200px;
 }
+
+/* About Us */
+.about-img-background {
+  width: 1350px;
+  height: 625px;
+  background-image: url("images/about-us/about-us-header.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin: 60px auto 100px;
+}
+
+.about-text-on-img {
+  position: absolute;
+  left: 135px;
+  top: 150px;
+  width: 610px;
+}
