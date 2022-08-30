@@ -556,9 +556,33 @@
   border: none;
   border-radius: 4px;
   font-size: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 90px;
 }
 
 .blog-img {
-  width: 500px;
+  width: 450px;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: -15px;
+}
+
+.blog-articles {
+  width: 450px;
+  font-size: 30px;
+  line-height: 38px;
+  margin-bottom: -10px;
+}
+
+.blog-dates {
+  font-size: 18px;
+  margin-bottom: 50px;
+  width: 480px;
+}
+
+.blog-articles-left {
+  margin-left: 220px;
+}
+
+.blog-articles-right {
+  margin-right: 170px;
 }
