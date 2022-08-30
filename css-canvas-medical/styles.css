@@ -467,6 +467,7 @@
 
 .about-p-blue {
   font-weight: bold;
+  margin-bottom: 150px;
 }
 
 .about-heading-believe {
@@ -475,5 +476,50 @@
 
 .about-team-img {
   border-radius: 50%;
-  width: 300px;
+  width: 230px;
+  margin-bottom: -10px;
+}
+
+.about-heading-team {
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.about-subheading-team {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.about-team-p {
+  font-size: 18px;
+  margin-bottom: 55px;
+}
+
+.about-team-jh {
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-board-heading {
+  font-size: 35px;
+  margin-top: 75px;
+}
+
+.about-board-p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.about-story-heading {
+  font-size: 32px;
+  margin-top: 140px;
+}
+
+.about-story-p {
+  font-size: 18px;
+  width: 670px;
+  line-height: 27px;
+  margin-left: auto;
+  margin-right: auto;
 }
