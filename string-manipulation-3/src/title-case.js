@@ -8,29 +8,23 @@ function titleCase(title) {
     if (arr[i].includes(':')) {
       if (arr[i].includes('javascript')) {
         jsUpper();
+      } else if (arr[i].includes('api')) {
+        apiUpper();
       } else {
-        var colonWord = arr[i];
-        var colonUpper = colonWord[0].toUpperCase() + colonWord.slice(1);
-        newArr.push(colonUpper);
+        generalUpper();
       }
       nextColon = true;
     } else if (nextColon === true) {
-      var nextWord = arr[i];
-      var nextUpper = nextWord[0].toUpperCase() + nextWord.slice(1);
-      newArr.push(nextUpper);
+      generalUpper();
       nextColon = false;
     } else if (i === 0) {
-      var firstWord = arr[i];
-      var firstUpper = firstWord[0].toUpperCase() + firstWord.slice(1);
-      newArr.push(firstUpper);
+      generalUpper();
     } else if (nextColon === false && ((arr[i].length < 3 && arr[i] !== 'i') || arr[i] === 'and' || arr[i] === 'nor' || arr[i] === 'but' || arr[i] === 'the' || arr[i] === 'for' || arr[i] === 'per')) {
       newArr.push(arr[i]);
     } else if (arr[i].includes('javascript')) {
       jsUpper();
     } else if (arr[i] === 'api') {
-      var api = arr[i];
-      var apiUpper = api.toUpperCase();
-      newArr.push(apiUpper);
+      apiUpper();
     } else if (arr[i].includes('-')) {
       var dashWord = arr[i];
       var dashArr = dashWord.split('-');
@@ -42,22 +36,24 @@ function titleCase(title) {
       var dashJoin = dashCap.join('-');
       newArr.push(dashJoin);
     } else {
-      var word = arr[i];
-      var upper = word[0].toUpperCase() + word.slice(1);
-      newArr.push(upper);
+      generalUpper();
     }
+  }
+  function generalUpper() {
+    var word = arr[i];
+    var upper = word[0].toUpperCase() + word.slice(1);
+    newArr.push(upper);
   }
   function jsUpper() {
     var js = arr[i];
     var jsUpper = js[0].toUpperCase() + js.slice(1, 4) + js[4].toUpperCase() + js.slice(5);
     newArr.push(jsUpper);
   }
+  function apiUpper() {
+    var api = arr[i];
+    var apiUpper = api.toUpperCase();
+    newArr.push(apiUpper);
+  }
   var finalString = newArr.join(' ');
   return finalString;
 }
-
-titleCase('the cat in the hat');
-
-/* Need to finish dash situation - need to capitalize both words between dash and then join with dash
-Need to capitalize the word after a colon.
-Need to figure out why the extra 'the' is being capitalized in some cases. */
