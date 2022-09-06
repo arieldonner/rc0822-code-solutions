@@ -1,0 +1,41 @@
+.container {
+  max-width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.column-full {
+  flex-basis: calc(100% / 3);
+}
+
+.circle-light {
+  height: 400px;
+  width: 400px;
+  background-color: rgb(255 255 133);
+  border-radius: 50%;
+  margin: 200px auto;
+  box-shadow: 0 0 50px rgb(214 214 115);
+}
+
+.circle-dark {
+  height: 400px;
+  width: 400px;
+  background-color: rgb(43 43 43);
+  border-radius: 50%;
+  margin: 200px auto;
+  box-shadow: 0 -20px rgb(20 20 20);
+}
+
+.background-light {
+  background-color: none;
+}
+
+.background-dark {
+  background-color: rgb(24 24 24);
+}
