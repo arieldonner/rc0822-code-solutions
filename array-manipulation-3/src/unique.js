@@ -2,14 +2,15 @@
 function unique(array) {
   var finalArr = [];
   for (var i = 0; i < array.length; i++) {
-    var currentValue = array[i];
-    // console.log(currentValue);
-    // console.log('first', array.indexOf(currentValue));
-    // console.log('last', array.lastIndexOf(currentValue));
-    if (array.indexOf(currentValue, i) !== array.lastIndexOf(currentValue)) {
+    if (!finalArr.includes(array[i])) {
       finalArr.push(array[i]);
     }
   }
-  // console.log(finalArr);
   return finalArr;
 }
+
+/* Create a variable to hold the final array.
+Create a for loop that is intitialized at 0, runs until the length of the array, and incremements by 1
+Check if the current element is NOT included in the final array.
+If this is true, then push the element into the final array.
+Outside of the loop, the final array will be returned from the function. */
