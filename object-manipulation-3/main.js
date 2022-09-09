@@ -21,10 +21,9 @@ function createDeck() {
 }
 
 createDeck();
-console.log(deck);
 
 var shuffled = _.shuffle(deck);
-console.log(shuffled);
+console.log('shuffled deck:', shuffled);
 
 function dealOneCard() {
   for (var i = 0; i < players.length; i++) {
@@ -35,9 +34,9 @@ function dealOneCard() {
 dealOneCard();
 dealOneCard();
 
-console.log(players);
+console.log('Players and their hands:', players);
 
-// var counts = [];
+var scores = [];
 
 function addPoints() {
   var count = 0;
@@ -46,7 +45,6 @@ function addPoints() {
     console.log('card1:', card1);
 
     var card1Number = parseInt(card1);
-    console.log('card1Number:', card1Number);
 
     var card2 = players[i].hand[1].rank;
     console.log('card2:', card2);
@@ -67,8 +65,49 @@ function addPoints() {
       }
     }
     count = card1Number + card2Number;
-    console.log('count:', count);
+    console.log('Score:', count);
+    scores.push(count);
   }
 }
 
 addPoints();
+
+var score1 = scores[0];
+var score2 = scores[1];
+var score3 = scores[2];
+var score4 = scores[3];
+console.log('List of scores:', scores);
+
+var highestSort = scores.sort(function (a, b) { return b - a; });
+console.log('Scores sorted highest to lowest:', highestSort);
+var highScore = highestSort[0];
+
+function findWinner() {
+  if (highestSort.lastIndexOf(highScore) === 0) {
+    if (highScore === score1) {
+      console.log('Player 1 wins!');
+    } else if (highScore === score2) {
+      console.log('player 2 wins!');
+    } else if (highScore === score3) {
+      console.log('Player 3 wins!');
+    } else if (highScore === score4) {
+      console.log('Player 4 wins!');
+    }
+  } else {
+    console.log("It's a tie between:");
+    if (highScore === score1) {
+      console.log('Player 1');
+    }
+    if (highScore === score2) {
+      console.log('Player 2');
+    }
+    if (highScore === score3) {
+      console.log('Player 3');
+    }
+    if (highScore === score4) {
+      console.log('Player 4');
+    }
+  }
+}
+
+findWinner();
