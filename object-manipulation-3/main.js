@@ -1,5 +1,94 @@
 console.log('Lodash is loaded:', typeof _ !== 'undefined');
 
+/* Solution using function. Can change player and card amount. */
+
+function playGame(players, cards) {
+  var ranks = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King'];
+  var suits = ['clubs', 'diamonds', 'hearts', 'spades'];
+  var deck = [];
+
+  function createDeck() {
+    for (var i = 0; i < suits.length; i++) {
+      for (var j = 0; j < ranks.length; j++) {
+        var card = { rank: ranks[j], suit: suits[i] };
+        deck.push(card);
+      }
+    }
+  }
+
+  createDeck();
+
+  var shuffled = _.shuffle(deck);
+  console.log('shuffled deck:', shuffled);
+
+  function dealOneCard() {
+    for (var i = 0; i < players.length; i++) {
+      var oneCard = shuffled.pop();
+      players[i].hand.push(oneCard);
+    }
+  }
+
+  for (var c = 0; c < cards; c++) {
+    dealOneCard();
+  }
+
+  console.log('Players and their hands:', players);
+
+  var scores = [];
+
+  function addPoints() {
+    var count = 0;
+    for (var i = 0; i < players.length; i++) {
+      for (var j = 0; j < players[i].hand.length; j++) {
+        var currentCard = players[i].hand[j].rank;
+        var cardNumber = parseInt(currentCard);
+        if (isNaN(cardNumber) === true) {
+          if (currentCard === 'Ace') {
+            cardNumber = 11;
+          } else {
+            cardNumber = 10;
+          }
+        }
+        count += cardNumber;
+      }
+      console.log('Score:', count);
+      scores.push(count);
+      count = 0;
+    }
+  }
+
+  addPoints();
+
+  console.log('List of scores:', scores);
+
+  var highestSort = scores.slice().sort(function (a, b) { return b - a; });
+  console.log('Scores sorted highest to lowest:', highestSort);
+  var highScore = highestSort[0];
+
+  function findWinner() {
+    if (highestSort.lastIndexOf(highScore) === 0) {
+      for (var i = 0; i < scores.length; i++) {
+        if (highScore === scores[i]) {
+          console.log(players[i].name + ' wins!');
+        }
+      }
+    } else {
+      console.log("It's a tie between:");
+      for (var j = 0; j < scores.length; j++) {
+        if (highScore === scores[j]) {
+          console.log(players[j].name);
+        }
+      }
+    }
+  }
+
+  findWinner();
+}
+
+playGame([{ name: 'Player 1', hand: [] }, { name: 'Player 2', hand: [] }, { name: 'Player 3', hand: [] }, { name: 'Player 4', hand: [] }], 2);
+
+/* Below is solution that worked only for 4 players drawing 2 cards each.
+
 var players = [
   { name: 'Player 1', hand: [] },
   { name: 'Player 2', hand: [] },
@@ -110,4 +199,4 @@ function findWinner() {
   }
 }
 
-findWinner();
+findWinner(); */
