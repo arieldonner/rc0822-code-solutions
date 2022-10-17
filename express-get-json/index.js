@@ -22,9 +22,8 @@ const grades = {
   }
 };
 
-var gradesArr = [];
-
 app.get('/api/grades', (req, res) => {
+  const gradesArr = [];
   for (const grade in grades) {
     gradesArr.push(grades[grade]);
   }
