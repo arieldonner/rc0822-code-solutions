@@ -24,18 +24,16 @@ console.log('sum:', sum);
 const product = numbers.reduce((previousValue, currentValue) => previousValue * currentValue);
 console.log('product:', product);
 
-let totalBalance = 0;
 const balance = account.reduce((previousValue, currentValue) => {
   if (currentValue.type === 'deposit') {
-    totalBalance = previousValue + currentValue.amount;
+    previousValue += currentValue.amount;
   } else {
-    totalBalance = previousValue - currentValue.amount;
+    previousValue -= currentValue.amount;
   }
-  return totalBalance;
-}, totalBalance);
+  return previousValue;
+}, 0);
 console.log('balance:', balance);
 
-const pokemon = {};
 const composite = traits.reduce((previousValue, currentValue) =>
-  Object.assign(pokemon, currentValue), 0);
-console.log('composite:', pokemon);
+  Object.assign(previousValue, currentValue), {});
+console.log('composite:', composite);
