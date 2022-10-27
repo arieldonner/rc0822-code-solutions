@@ -1,0 +1,32 @@
+.btn {
+  border: 3px solid black;
+  padding: 0.8rem 1.2rem;
+  box-shadow: 4px 4px black;
+}
+
+.dark-purple {
+  background-color: rgb(55 0 128);
+  color: white;
+}
+
+.light-purple {
+  background-color: rgb(171 130 238);
+  color: white;
+}
+
+.red {
+  background-color: rgb(255 82 82);
+  color: white;
+}
+
+.orange {
+  background-color: rgb(248 143 45);
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.white {
+  background-color: white;
+}
