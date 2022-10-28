@@ -1,0 +1,30 @@
+label {
+  display: block;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.box {
+  border: 2px solid black;
+  padding: 0.4rem;
+  margin-right: 1rem;
+}
+
+.icon {
+  transform: scale(1.6);
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.red-txt {
+  color: red;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
