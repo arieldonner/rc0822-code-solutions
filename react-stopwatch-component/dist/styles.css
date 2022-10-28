@@ -19,6 +19,7 @@
   font-size: 3rem;
 }
 
-.fa-solid {
+.icon {
   transform: scale(2);
+  margin-top: 1rem;
 }

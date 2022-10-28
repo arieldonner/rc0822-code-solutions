@@ -1,39 +1,50 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 
 class Stopwatch extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
-    this.state = { isPlaying: false, count: 0 };
+    this.reset = this.reset.bind(this);
+    this.state = { isPlaying: false, seconds: 0 };
   }
 
   handleClick() {
-    this.setState({ isPlaying: !this.state.isPlaying });
-  }
-
-  tick() {
-    this.setState({ count: this.state.count + 1 });
-  }
-
-  render() {
-    let button = 'fa-play';
-
-    if (this.state.isPlaying) {
-      button = 'fa-pause';
+    if (this.state.isPlaying === true) {
+      clearInterval(this.timerID);
+    } else if (this.state.isPlaying === false) {
       this.timerID = setInterval(
         () => this.tick(),
         1000
       );
-    } else {
-      clearInterval(this.timerID);
+    }
+    this.setState({ isPlaying: !this.state.isPlaying });
+  }
+
+  tick() {
+    this.setState({ seconds: this.state.seconds + 1 });
+  }
+
+  reset() {
+    if (this.state.isPlaying === false) {
+      this.setState({ seconds: 0 });
+    }
+  }
+
+  render() {
+    let button = faPlay;
+
+    if (this.state.isPlaying) {
+      button = faPause;
     }
 
     return (
       <div className='column'>
-        <div className='circle'>
-          <p className='number'>{this.state.count}</p>
+        <div className='circle' onClick={this.reset}>
+          <p className='number'>{this.state.seconds}</p>
         </div>
-        <i className={`fa-solid ${button}`} onClick={this.handleClick}></i>
+        <FontAwesomeIcon icon={button} className='icon' onClick={this.handleClick}/>
       </div>
     );
   }
