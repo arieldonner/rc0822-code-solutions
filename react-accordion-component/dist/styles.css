@@ -1,0 +1,11 @@
+body {
+  font-family: sans-serif;
+}
+
+.list {
+  list-style: none;
+  border: 1px solid black;
+  width: 300px;
+  background-color: rgb(201 201 201);
+  padding: 0.8rem 1rem 0.8rem 0.2rem;
+}
