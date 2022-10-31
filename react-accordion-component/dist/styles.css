@@ -2,10 +2,35 @@ body {
   font-family: sans-serif;
 }
 
-.list {
+/* .list {
   list-style: none;
   border: 1px solid black;
   width: 300px;
   background-color: rgb(201 201 201);
   padding: 0.8rem 1rem 0.8rem 0.2rem;
+  cursor: pointer;
+} */
+
+.name {
+  border: 1px solid black;
+  width: 300px;
+  background-color: rgb(201 201 201);
+  padding: 0.8rem 1rem 0.8rem 0.2rem;
+  cursor: pointer;
+  margin-bottom: -1rem;
+}
+
+.details {
+  width: 300px;
+  border: 1px solid black;
+  padding: 0.8rem 1rem 0.8rem 0.2rem;
+  margin-bottom: -1rem;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
