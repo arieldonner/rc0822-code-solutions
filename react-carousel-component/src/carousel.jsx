@@ -21,7 +21,8 @@ class Carousel extends React.Component {
   }
 
   handleArrowRight(event) {
-    if (event.target === event.currentTarget && this.state.counter < 3) {
+    const img = this.props.img;
+    if (event.target === event.currentTarget && this.state.counter < img.length) {
       this.setState({ counter: this.state.counter + 1, url: this.props.img[this.state.counter] });
     } else {
       this.setState({ counter: 0, url: this.props.img[0] });
@@ -29,11 +30,12 @@ class Carousel extends React.Component {
   }
 
   handleArrowLeft(event) {
+    const img = this.props.img;
     if (event.target === event.currentTarget) {
       if (event.target === event.currentTarget && this.state.counter > 0) {
         this.setState({ counter: this.state.counter - 1, url: this.props.img[this.state.counter] });
       } else {
-        this.setState({ counter: 3, url: this.props.img[3] });
+        this.setState({ counter: img.length, url: this.props.img[img.length] });
       }
     }
   }
