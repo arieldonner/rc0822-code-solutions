@@ -98,10 +98,8 @@ export default class App extends React.Component {
     })
       .then(response => response.json())
       .then(data => {
-        const copy = this.state.todos;
-        const currentTodo = this.state.todos[current];
-        currentTodo.isCompleted = newObj.isCompleted;
-        copy.splice(current, 1, currentTodo);
+        const copy = this.state.todos.slice();
+        copy[current] = data;
         this.setState({ todos: copy });
       })
       .catch(err => console.error('Fetch failed!', err));
