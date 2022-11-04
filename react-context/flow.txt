@@ -1,0 +1,18 @@
+User can sign up:
+Post request is sent; checks to make sure that a password and username are
+included. Hashes the password. Inserts the username and password into a row in the
+database.
+
+User can sign in:
+Post request is sent. Checks that both a username and password are included. Queries the
+database and checks if the user exists, then if the entered password will match the
+hashed password. If it matches, the client is given a token. Token is saved in local
+storage. User state is set to the current user.
+
+User can stay signed in (even if they refresh the page):
+When the component mounts, checks if the user has a token. If the user has a token,
+the user state is set to that user and they are redirected to the "home" (gif) page.
+
+User can sign out:
+Removes the token from local storage. User state is set to null. User is returned
+to the log in page where they can sign in again or sign up.
